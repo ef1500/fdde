@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+
+# Test audio — copyrighted material, keep it out of the repo
+*.mp3
+*.wav
