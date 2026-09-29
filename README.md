@@ -187,7 +187,8 @@ FDDE(dx: int, depth: int, size: int)   # all >= 1, else ValueError
 - **Haitsma–Kalker fingerprinting** (2002) — sub-fingerprints from the sign of energy differences, matched on Hamming distance. The same invariance insight applied to a spectrogram.
 - **Shingling and minhash** (Broder, 1997) — turns an overlapping-window token stream into a similarity search; composes directly with hapax sets.
 
-I pretty much just added differentials to Parson's idea, and then used a sliding window to represent it, which can be used to create a set of naive hashes.
+I pretty much just added differentials to Parson's idea, and then used a sliding window to represent it, which can be used to create a set of naive hashes. I use this in my personal, local similar music search.
+
 ---
 
 ## Credit
