@@ -149,7 +149,6 @@ Built for, and measured on, audio fingerprinting and vocal codebooks (tally resi
 
 ### Not useful for
 
-- **Finding similar music.** This is a near-duplicate fingerprint — different sections of the same song score as low as unrelated tracks. It will not find covers, remixes or songs that merely sound alike.
 - **Compression.** It spends `depth` bits per step on one bit of information. The redundancy is the product, not waste.
 - **Recovering amplitude.** Reconstruction returns shape and turning points, never magnitude, and degrades quickly with noise.
 - **Polarity-inverted signals.** Multiplying by −1 flips every bit; nothing survives.
@@ -188,8 +187,7 @@ FDDE(dx: int, depth: int, size: int)   # all >= 1, else ValueError
 - **Haitsma–Kalker fingerprinting** (2002) — sub-fingerprints from the sign of energy differences, matched on Hamming distance. The same invariance insight applied to a spectrogram.
 - **Shingling and minhash** (Broder, 1997) — turns an overlapping-window token stream into a similarity search; composes directly with hapax sets.
 
-FDDE's contribution is the packaging: the overlapping fixed-depth window, the `dx`/`depth`/`size` surface, and the hapax-residual framing for fingerprinting.
-
+I pretty much just added differentials to Parson's idea, and then used a sliding window to represent it, which can be used to create a set of naive hashes.
 ---
 
 ## Credit
