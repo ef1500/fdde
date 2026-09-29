@@ -137,7 +137,7 @@ In a 35-segment retrieval benchmark with mp3-degraded, randomly-shifted queries,
 
 Built for, and measured on, audio fingerprinting and vocal codebooks (tally residual frequencies, keep the top-`k` as a speaker profile — untouched by mic gain, distance and recording level). The same properties suit:
 
-- Query-by-humming and melodic contour search
+- Query-by-humming and melodic contour search (Alternatively, this can be used to create your own, local variant of Shazam.)
 - Motif and repeat discovery in time series
 - Gesture and IMU recognition, where scale varies per person and mounting
 - Biosignal beat tokenization (ECG, PPG)
