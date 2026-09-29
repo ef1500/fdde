@@ -2,7 +2,7 @@
 
 Turn a continuous signal into a stream of small integers describing its **local shape**, not its values.
 
-FDDE keeps only whether each step went up or not-up, slides a fixed-width window over those direction bits, and packs the window positions into tokens you can hash, count, index or diff. The output is exactly invariant to amplitude, costs one compare and one shift per step, and lands in a small discrete alphabet — which makes waveform data behave (sorta) like text.
+FDDE keeps only whether each step went up or not-up, slides a fixed-width window over those direction bits, and packs the window positions into tokens (naive hashes) you can hash with a proper algorithm, count, index or diff. The output is exactly invariant to amplitude, costs one compare and one shift per step, and lands in a small discrete alphabet — which makes waveform data behave (sorta) like text.
 
 ---
 
