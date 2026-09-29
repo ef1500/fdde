@@ -2,7 +2,7 @@
 
 Turn a continuous signal into a stream of small integers describing its **local shape**, not its values.
 
-FDDE keeps only whether each step went up or not-up, slides a fixed-width window over those direction bits, and packs the window positions into tokens you can hash, count, index or diff. The output is exactly invariant to amplitude, costs one compare and one shift per step, and lands in a small discrete alphabet — which makes waveform data behave like text.
+FDDE keeps only whether each step went up or not-up, slides a fixed-width window over those direction bits, and packs the window positions into tokens you can hash, count, index or diff. The output is exactly invariant to amplitude, costs one compare and one shift per step, and lands in a small discrete alphabet — which makes waveform data behave (sorta) like text.
 
 ---
 
@@ -24,7 +24,7 @@ FDDE keeps only whether each step went up or not-up, slides a fixed-width window
 | 9  | -0.8672 | down | `1000` |
 | 10 | -0.9589 | down | `0000` |
 
-Read **down the last column** for the direction sequence; read **across a row** for the last four directions as one number. The first slice has no predecessor, so it produces no residual.
+Read **down the last column** for the direction sequence; read **across a row** for the last four directions as one number. The first slice has no predecessor, so it produces no residual. It is labeled as hidden to convey that.
 
 At `size=4`, four residuals concatenate per token:
 
