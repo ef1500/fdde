@@ -203,6 +203,7 @@ Christopher J. Cole — <https://github.com/ef1500/fdde>
 }
 ```
 
+---
 ## License
 
 [MIT](LICENSE.txt) © 2026 Christopher J. Cole.
